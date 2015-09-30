@@ -37,7 +37,7 @@ qint64 OscillatorSource::read(float** buffer, qint64 numFrames){
     // copy to other channels
     for(int c = 0; c < audioFormat.channelCount(); c++){
         for(int i = 0; i < numFrames; i++){
-            buffer[c][i] = buffer[c][i];
+            buffer[c][i] = buffer[0][i];
         }
     }
     return numFrames;
