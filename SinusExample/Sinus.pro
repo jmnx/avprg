@@ -11,14 +11,15 @@ TARGET = Sinus
 TEMPLATE = app
 
 INCLUDEPATH += ../audioengine
+
 SOURCES += main.cpp\
         mainwindow.cpp\
         oscillatorsource.cpp\
-    sinus.cpp
+        sinus.cpp
 
-HEADERS  += mainwindow.h \
-    oscillatorsource.h\
-    sinus.h
+HEADERS  += mainwindow.h\
+        oscillatorsource.h\
+        sinus.h
 
 FORMS    += mainwindow.ui
 

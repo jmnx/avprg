@@ -4,17 +4,24 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TestProjekt
 TEMPLATE = app
 
+INCLUDEPATH += ../audioengine
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp\
+        oscillatorsource.cpp\
+        sinus.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h\
+        oscillatorsource.h\
+        sinus.h
 
 FORMS    += mainwindow.ui
+
+include(../audioengine/audioplayer.pri)

@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFile>
+#include <QAudioOutput>
+#include "audioplayer.h"
+#include "oscillatorsource.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +22,15 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_horizontalSlider_valueChanged(int value);
+
+    void on_pushButton_2_clicked();
+
 private:
+    void initializeAudio();
     Ui::MainWindow *ui;
+    OscillatorSource oscillatorSource;
+    AudioPlayer audioPlayer;
 };
 
 #endif // MAINWINDOW_H
