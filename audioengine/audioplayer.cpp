@@ -1,4 +1,4 @@
-#include "audioplayer.h"
+#include "AudioPlayer.h"
 #include <QAudioOutput>
 #include <QDebug>
 #include <QFile>

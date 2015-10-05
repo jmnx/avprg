@@ -1,7 +1,6 @@
 #ifndef OSCILLATOR
 #define OSCILLATOR
 
-
 class Oscillator{
 public:
     Oscillator();

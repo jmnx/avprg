@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>471</width>
+    <height>308</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -68,14 +68,14 @@
    <widget class="QLabel" name="frequencyLabel">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>30</y>
-      <width>47</width>
-      <height>13</height>
+      <x>330</x>
+      <y>20</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>frequencyLabel</string>
+     <string>frequency</string>
     </property>
    </widget>
    <widget class="QSlider" name="gainSlider">
@@ -107,14 +107,40 @@
      <string>Gain:</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>130</y>
+      <width>115</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pauseButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>130</y>
+      <width>115</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>21</height>
+     <width>471</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
