@@ -24,7 +24,8 @@ void OscillatorSource::setNote(int noteNumber){
     setFrequency(frequency);
 }
 
-void OscillatorSource::setGain(float gain){
+void OscillatorSource::setGain(float decibel){
+    float gain = pow(10, decibel/20.f);
     oscillator.setGain(gain);
 }
 void OscillatorSource::noteOn(){
