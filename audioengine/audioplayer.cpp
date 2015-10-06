@@ -77,7 +77,6 @@ qint64 AudioPlayer::readData(char *data, qint64 bytesWanted)
     if (audioSource == 0){
         return 0;
     }
-    qDebug() << "readdata";
     qint64 framesWanted = audioFormat.framesForBytes(bytesWanted);
     qint64 total = 0;
     while (framesWanted - total > 0) {
