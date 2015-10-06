@@ -49,7 +49,7 @@ void MainWindow::on_waveformCombobox_activated(int index)
 
 void MainWindow::on_gainSlider_valueChanged(int value)
 {
-    oscillatorSource.setGain(value / 100.f);
+    oscillatorSource.setGain(value);
 }
 
 

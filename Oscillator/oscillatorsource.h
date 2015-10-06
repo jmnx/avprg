@@ -17,7 +17,7 @@ public:
     void setSelectedOscillator(int index);
     void setFrequency(float frequency);
     void setNote(int noteNumber);
-    void setGain(float gain);
+    void setGain(float decibel);
     void noteOn();
     void noteOff();
 private:
