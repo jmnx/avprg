@@ -31,7 +31,7 @@ void OscillatorSource::noteOn(){
     envelope.setState(Envelope::ON);
 }
 void OscillatorSource::noteOff(){
-    envelope.setState(Envelope::OFF);
+    envelope.setState(Envelope::RELEASE);
 }
 
 void OscillatorSource::start(){
