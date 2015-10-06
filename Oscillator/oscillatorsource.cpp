@@ -28,7 +28,7 @@ void OscillatorSource::setGain(float gain){
     oscillator.setGain(gain);
 }
 void OscillatorSource::noteOn(){
-    envelope.setState(Envelope::ON);
+    envelope.setState(Envelope::ATTACK);
 }
 void OscillatorSource::noteOff(){
     envelope.setState(Envelope::RELEASE);
