@@ -5,6 +5,7 @@
 
 #include "audiosource.h"
 #include "oscillator.h"
+#include "envelope.h"
 class OscillatorSource: public AudioSource
 {
 public:
@@ -15,10 +16,16 @@ public:
     virtual void stop();
     void setSelectedOscillator(int index);
     void setFrequency(float frequency);
+    void setNote(int noteNumber);
     void setGain(float gain);
+    void noteOn();
+    void noteOff();
+private:
+    float createSample();
 private:
     QAudioFormat audioFormat;
     Oscillator oscillator;
+    Envelope envelope;
 };
 
 #endif // OSCILLATORSOURCE_H

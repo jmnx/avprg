@@ -1,3 +1,4 @@
+#include <math.h>
 #include "oscillatorsource.h"
 
 
@@ -18,21 +19,39 @@ void OscillatorSource::setSelectedOscillator(int index){
 void OscillatorSource::setFrequency(float frequency){
     oscillator.setFrequency(frequency);
 }
+void OscillatorSource::setNote(int noteNumber){
+    float frequency = 440.0 * pow(2.0, (noteNumber - 69.0)/12.0);
+    setFrequency(frequency);
+}
+
 void OscillatorSource::setGain(float gain){
     oscillator.setGain(gain);
+}
+void OscillatorSource::noteOn(){
+    envelope.setState(Envelope::ON);
+}
+void OscillatorSource::noteOff(){
+    envelope.setState(Envelope::OFF);
 }
 
 void OscillatorSource::start(){
     oscillator.initialize(audioFormat.sampleRate());
+    envelope.setSampleRate(audioFormat.sampleRate());
 }
 const QAudioFormat& OscillatorSource::format() const{
     return audioFormat;
 }
 
+float OscillatorSource::createSample(){
+    float sample = oscillator.getValue();
+    sample = envelope.process(sample);
+    return sample;
+}
+
 qint64 OscillatorSource::read(float** buffer, qint64 numFrames){
     // get audio data for left channel
     for(int i = 0; i < numFrames; i++){
-        buffer[0][i] = oscillator.getValue();
+        buffer[0][i] = createSample();
     }
     // copy to other channels
     for(int c = 0; c < audioFormat.channelCount(); c++){
