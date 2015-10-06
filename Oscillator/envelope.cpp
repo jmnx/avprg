@@ -2,8 +2,9 @@
 #include "envelope.h"
 
 Envelope::Envelope()
-    : sampleRate(0), gain(0), state(OFF), releaseSeconds(0),
-      attackSeconds(0)
+
+    : sampleRate(0), gain(0), state(OFF), releaseSeconds(0)
+    , attackSeconds(0)
 {
     setReleaseSeconds(0.5);
     setAttackSeconds(1);
@@ -15,6 +16,10 @@ void Envelope::setSampleRate(float sampleRate)
 void Envelope::setReleaseSeconds(float seconds)
 {
     this->releaseSeconds = seconds;
+}
+void Envelope::setAttackSeconds(float seconds)
+{
+    this->attackSeconds = seconds;
 }
 
 void Envelope::setAttackSeconds(float seconds)
@@ -36,7 +41,8 @@ void Envelope::setState(State state)
     }
 }
 
-float Envelope::process(float input){
+float Envelope::process(float input)
+{
     if(state == ATTACK){
         gain += 1/(sampleRate * attackSeconds);
         if(gain >= 1){

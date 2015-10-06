@@ -5,7 +5,8 @@
 class Envelope
 {
 public:
-    enum State{OFF, ON, ATTACK, RELEASE};
+    enum State{OFF, ATTACK, ON, RELEASE};
+    
     Envelope();
     void setSampleRate(float sampleRate);
     float process(float input);
