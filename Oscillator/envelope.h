@@ -12,12 +12,16 @@ public:
     void setState(State state);
     void setReleaseSeconds(float seconds);
     void setAttackSeconds(float seconds);
+    void setDecaySeconds(float seconds);
+    void setSustain_dB(float sustain_dB);
 private:
     State state;
     float sampleRate;
     float gain;
     float releaseSeconds;
     float attackSeconds;
+    float decaySeconds;
+    float sustain_dB;
 };
 
 #endif // ENVELOPE_H
