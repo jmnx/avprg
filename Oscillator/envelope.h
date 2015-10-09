@@ -18,10 +18,14 @@ private:
     State state;
     float sampleRate;
     float gain;
+    float gainChange;
     float releaseSeconds;
     float attackSeconds;
     float decaySeconds;
     float sustain_dB;
+    float sustainGain;
+    float minGain_dB;
+    float minGain;
 };
 
 #endif // ENVELOPE_H
