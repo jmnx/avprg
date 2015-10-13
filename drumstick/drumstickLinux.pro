@@ -1,6 +1,8 @@
-INCLUDEPATH += ../drumstick
+INCLUDEPATH += ../drumstick/
+         ../drumstick/include/
 
-HEADERS += ../drumstick/midiinput.h \
+HEADERS += \
+    ../drumstick/midiinput.h\
     ../drumstick/midioutput.h\
     ../drumstick/alsamidiinput.h\
     ../drumstick/alsamidioutput.h
