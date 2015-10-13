@@ -6,8 +6,6 @@
 #include "audiosource.h"
 #include "oscillator.h"
 #include "envelope.h"
-
-
 class OscillatorSource: public AudioSource
 {
 public:
